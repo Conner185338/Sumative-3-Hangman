@@ -1,0 +1,17 @@
+﻿<Window x:Class="_185338Hangman.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_185338Hangman"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Background="Black">
+        <TextBox x:Name="txtInput" Background="LightGray" FontSize="20" BorderBrush="Black" BorderThickness="1" MaxLength="1"/>
+        <TextBlock x:Name="txbWord" Text="" Background="LightGray" FontSize="20"/>
+        <Button x:Name="btnClick" Content="Check letter" Click="btnClick_Click" Background="LightGray" Height="50" FontSize="30" BorderBrush="Black" BorderThickness="1"/>
+        <Label x:Name="lblLetters" Content="" FontSize="20" Background="LightGray" BorderBrush="Black" BorderThickness="1"/>
+        <Label x:Name="lblLives" Content="" Background="LightGray" FontSize="20" BorderBrush="Black" BorderThickness="1"/>
+        
+    </StackPanel>
+</Window>
