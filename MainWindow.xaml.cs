@@ -34,7 +34,11 @@ namespace _185338Hangman
         int RemainingGuesses = 4;
         public MainWindow()
         {
+            
             InitializeComponent();
+            ImageBrush Image = new ImageBrush();
+            Image.ImageSource = new BitmapImage(new Uri("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHlDnW4znI1TrwxpmxqMUTJpQSYialXFx1euPaiCyKt7kN43I0"));
+            myCanvas.Background = Image;
             startGame(true);
             randNumber = random.Next(1, 11);
             //MessageBox.Show(randNumber.ToString());
@@ -151,7 +155,7 @@ namespace _185338Hangman
                 txbWord.Text = hiddenWord;
                 lblLives.Content = "Lives left : 4";
                 RemainingGuesses = 4;
-                lblLetters.Content = "";
+                lblLetters.Content = "Letter's Used: ";
                 GameOver = false;
                 return test = true;
             }

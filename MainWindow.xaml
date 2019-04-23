@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:_185338Hangman"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <StackPanel Background="Black">
-        <TextBox x:Name="txtInput" Background="LightGray" FontSize="20" BorderBrush="Black" BorderThickness="1" MaxLength="1"/>
-        <TextBlock x:Name="txbWord" Text="" Background="LightGray" FontSize="20"/>
-        <Button x:Name="btnClick" Content="Check letter" Click="btnClick_Click" Background="LightGray" Height="50" FontSize="30" BorderBrush="Black" BorderThickness="1"/>
-        <Label x:Name="lblLetters" Content="" FontSize="20" Background="LightGray" BorderBrush="Black" BorderThickness="1"/>
-        <Label x:Name="lblLives" Content="" Background="LightGray" FontSize="20" BorderBrush="Black" BorderThickness="1"/>
-        
-    </StackPanel>
+    <Canvas x:Name="myCanvas">
+        <TextBox x:Name="txtInput" Background="Gray" FontSize="20" MaxLength="1" Width="137" Canvas.Left="10" Canvas.Top="10"/>
+        <TextBlock x:Name="txbWord" Text="" Background="Gray" FontSize="20" Canvas.Left="10" Canvas.Top="99" Width="137"/>
+        <Button x:Name="btnClick" Content="Check letter" Click="btnClick_Click" Background="Gray" Height="50" FontSize="20" Canvas.Top="44" Canvas.Left="10" Width="137"/>
+        <Label x:Name="lblLetters" Content="Letter's Used:" FontSize="20" Background="Gray" Canvas.Top="131" Canvas.Left="10" Width="137"/>
+        <Label x:Name="lblLives" Content="" Background="Gray" FontSize="20" Canvas.Top="175" Width="137" Canvas.Left="10"/>
+
+    </Canvas>
 </Window>
