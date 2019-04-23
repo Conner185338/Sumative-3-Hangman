@@ -41,6 +41,7 @@ namespace _185338Hangman
             myCanvas.Background = Image;
             startGame(true);
             randNumber = random.Next(1, 11);
+            //picks a random word between 1 and 10
             //MessageBox.Show(randNumber.ToString());
 
             System.IO.StreamReader sr = new System.IO.StreamReader("Words.txt");
