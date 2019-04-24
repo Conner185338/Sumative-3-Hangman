@@ -39,7 +39,10 @@ namespace _185338Hangman
             ImageBrush Image = new ImageBrush();
             Image.ImageSource = new BitmapImage(new Uri("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHlDnW4znI1TrwxpmxqMUTJpQSYialXFx1euPaiCyKt7kN43I0"));
             myCanvas.Background = Image;
+            //Setting background image 
+            
             startGame(true);
+            //telling game to run start insturtions
             randNumber = random.Next(1, 11);
             //picks a random word between 1 and 10
             //MessageBox.Show(randNumber.ToString());
