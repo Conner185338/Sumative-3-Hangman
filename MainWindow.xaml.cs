@@ -45,6 +45,7 @@ namespace _185338Hangman
             //MessageBox.Show(randNumber.ToString());
 
             System.IO.StreamReader sr = new System.IO.StreamReader("Words.txt");
+            //Stream reader for reading and choosing a random word from the text file
 
             int counter = 0;
             string temp = "";
@@ -56,6 +57,7 @@ namespace _185338Hangman
 
             }//end while
             //MessageBox.Show(temp);
+            //Random Number/word 
 
             string hiddenword = "";
             //MessageBox.Show(word.Length.ToString());
@@ -65,7 +67,7 @@ namespace _185338Hangman
                 Console.WriteLine(i.ToString());
             }//end loop
             txbWord.Text = hiddenword;
-
+            //adding an underscore and space to each charactor place from the rando word choosen
         }
 
         private void btnClick_Click(object sender, RoutedEventArgs e)
@@ -91,6 +93,8 @@ namespace _185338Hangman
                     NewOutput += oldLetter.Substring(i * 2, 2);
                 }
             }//end for loop
+            //Telling program to output the letters guessed 
+            
 
             txbWord.Text = NewOutput;
             lblLetters.Content += LetterGuess;
@@ -108,6 +112,8 @@ namespace _185338Hangman
                     startGame(GameOver);
                 }
             }//end if
+            //Telling the program to end game when 0 lives are remaining 
+            //where to start lives at 
 
             bool test = false;
             CheckForWin(test);
@@ -127,6 +133,7 @@ namespace _185338Hangman
             {
                 return win = false;
             }//end if
+            //Telling program what to do if all the letters in the word are guessed which is output "You Win!!!
 
         }
 
@@ -152,6 +159,9 @@ namespace _185338Hangman
                     hiddenWord += "_ ";
                     Console.WriteLine(i.ToString());
                 }
+                //Telling the program how to start a game 
+                //First select random word from text file with stream reader and then convert it to underscores
+                
 
                 txbWord.Text = hiddenWord;
                 lblLives.Content = "Lives left : 4";
@@ -159,6 +169,7 @@ namespace _185338Hangman
                 lblLetters.Content = "Letter's Used: ";
                 GameOver = false;
                 return test = true;
+                //Assinging variables and text for lables
             }
             else
             {
